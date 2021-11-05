@@ -1,0 +1,90 @@
+ Student Kamaljit = new Student("Kamaljit Singh", 22040754);
+Kamaljit.print();
+ Student ID: 22040754, Kamaljit Singh
+Course Computing = new Course("BT1CTG1", "BSc Hons Computing");
+Kamaljit.enrol(Computing);
+Kamaljit.print();
+ Student ID: 22040754, Kamaljit Singh
+Computing.print();
+
+ Course BT1CTG1: BSc Hons Computing
+
+Kamaljit.printCourse();
+ Student ID: 22040754, Kamaljit Singh
+
+ Course BT1CTG1: BSc Hons Computing
+
+Module co452 = new Module("CO452", "Programming Concepts");
+Computing.addModule(co452);
+Computing.print();
+
+ Course BT1CTG1: BSc Hons Computing
+
+Computing.printModules();
+
+Student Karanpreet = new Student("Karanpreet Singh", 22040666);
+ModuleMark Kamaljitco452Mark = new ModuleMark(co452);
+Kamaljitco452Mark.setMark(64);
+ModuleMark Karanpreetco452Mark = new ModuleMark(co452);
+Karanpreetco452Mark.setMark(90);
+Kamaljit.addMark(Kamaljitco452Mark);
+Kamaljit.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22040754, Kamaljit Singh
+
+ Course BT1CTG1: BSc Hons Computing
+
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!
+Karanpreet.addMark(Karanpreetco452Mark);
+Student Kamaljit = new Student();
+Course computing = new Course();
+Module co452 = new Module("CO452", "Programming Concepts");
+computing.addModule(co452);
+Kamaljit.enrol(computing);
+Kamaljit.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22040754, kamaljit Singh
+
+ Course G400: BSc Computing
+
+ CO452: 	Programming Concepts
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!
+Module co450 = new Module("CO450", "Computer Architectures");
+computing.addModule(co450);
+Kamaljit.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22040754, kamaljit Singh
+
+ Course G400: BSc Computing
+
+ CO452: 	Programming Concepts
+ CO450: 	Computer Architectures
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!
