@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 /**
@@ -46,6 +47,18 @@ public class StockList
      */
     public void buyProduct(int productID, int amount)
     {
+        Product product = findProduct(productID);
+        
+        if(product != null) 
+        {
+            product.increaseQuantity(1);
+            System.out.println("Buying " + productID);
+        }
+        else
+        {
+            System.out.println("Not found " + productID);
+        }
+        
     }
     
     /**
@@ -54,7 +67,17 @@ public class StockList
      */
     public Product findProduct(int productID)
     {
+        for(Product product : stock)
+        {
+           if(product.getID()==productID) 
+           {
+               return product;
+           }
+        }
+       
+       
         return null;
+       
     }
     
     
@@ -73,11 +96,11 @@ public class StockList
             {
                 product.decreaseQuantity(1);
                 
-                // printout message
+                System.out.println("Selling " + productID);
             }
             else
             {
-                // printout message
+                System.out.println("No stock!!!");
             }
         }
         else
@@ -133,7 +156,7 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Peacock's Stock List");
+        System.out.println(" Kamaljit's Stock List");
         System.out.println(" ====================");
         System.out.println();
     }

@@ -24,8 +24,15 @@ public class StockDemo
         // Make sure the ids are sequential numbers
         
         stock.add(new Product(101, "Samsung Galaxy S20"));
-        stock.add(new Product(102, "Apple iPhone 12"));
-        stock.add(new Product(103, "Google Pixel 4A"));
+        stock.add(new Product(102, "Samsung Galaxy S10 "));
+        stock.add(new Product(103, "Samsung Galaxy S9"));
+        stock.add(new Product(104, "Samsung Galaxy S21"));
+        stock.add(new Product(105, "Samsung Galaxy M21"));
+        stock.add(new Product(106, "Samsung Galaxy M31"));
+        stock.add(new Product(107, "Samsung Galaxy NOTE10"));
+        stock.add(new Product(108, "Samsung Galaxy NOTE20"));
+        stock.add(new Product(109, "Samsung Galaxy A50"));
+        stock.add(new Product(110, "Samsung Galaxy A70"));
     }
     
     /**
@@ -50,9 +57,23 @@ public class StockDemo
     
     private void buyProducts()
     {
+        int amount = 20;
+        
+        for(int id = 101; id <= 110; id++)
+        {
+            stock.buyProduct(id, amount);
+            amount--;
+        }
     }
 
     private void sellProducts()
     {
+        int amount = 1;
+        
+        for(int id = 101; id <= 110; id++)
+        {
+            stock.sellProduct(id);
+            amount++;
+        }        
     }    
 }
